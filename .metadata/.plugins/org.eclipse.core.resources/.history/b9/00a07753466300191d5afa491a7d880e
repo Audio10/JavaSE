@@ -1,0 +1,54 @@
+package com.anncode.amazonviewer.model;
+
+import java.sql.Date;
+
+public class Book extends Publication{
+	
+	private int id;
+	
+	public Book(String title, Date editionData, String editorial, String[] authors) {
+		super(title, editionData, editorial, authors);
+		
+	}
+	
+	private String isbn;
+	private boolean readed;
+	private int timeReaded;
+	
+	public int getId() {
+		return id;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	public boolean isReaded() {
+		return readed;
+	}
+
+	public void setReaded(boolean readed) {
+		this.readed = readed;
+	}
+
+	public int getTimeReaded() {
+		return timeReaded;
+	}
+
+	public void setTimeReaded(int timeReaded) {
+		this.timeReaded = timeReaded;
+	}
+	
+	@Override
+	public String toString() {
+		return "Title: " + getTitle() +
+				"\nEditionDate: " + getEditionData() + 
+				"\nEditorial: " + getEditorial() +
+				"\nAuthors: " + getAuthors();
+	}
+	
+}

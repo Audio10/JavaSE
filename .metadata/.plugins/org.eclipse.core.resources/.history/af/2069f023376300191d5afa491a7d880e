@@ -1,0 +1,64 @@
+package com.anncode.amazonviewer;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		showMenu();
+		
+	}
+	
+	public static void showMenu() {
+
+		byte option = 0;
+		do {
+			Scanner writer = new Scanner(System.in);
+			
+			System.out.println("BIENVENIDOS AMAZON VIEWER");
+			System.out.println();
+			System.out.println("Selecciona el número de la opción deseada");
+			System.out.println("1. Movies");
+			System.out.println("2. Series");
+			System.out.println("3. Books");
+			System.out.println("4. Magazines");
+			System.out.println("0. Exit");
+			option = writer.nextByte();
+			switch (option) {
+			
+			case 1 :
+				
+				break;
+			
+			default:
+				System.out.println("Bye");
+				break;
+			}
+		}while(option != 0);
+	}
+	
+	public static void showMovies() {
+		int exit = 1;
+		do {
+			System.out.println();
+			System.out.println(":: MOVIES ::");
+			System.out.println();
+		} while (exit != 0);
+	}
+	
+	public static void showSeries() {
+		
+	}
+	
+	public static void showBooks() {
+		
+	}
+	
+	public static void showMagazines() {
+		
+	}
+	public static void showChapters() {
+		
+	}
+}
+	

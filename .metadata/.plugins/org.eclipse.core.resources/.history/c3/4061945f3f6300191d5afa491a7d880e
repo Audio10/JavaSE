@@ -1,0 +1,12 @@
+package com.anncode.amazonviewer.model;
+
+public class Serie extends Film{
+	private int id;
+	private int sessionQuantity;
+	private Chapter[] chapter;
+
+	public int getId() {
+		return id;
+	}
+
+}

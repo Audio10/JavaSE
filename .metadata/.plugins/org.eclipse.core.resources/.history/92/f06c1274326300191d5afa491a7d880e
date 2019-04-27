@@ -1,0 +1,11 @@
+package com.anncode.amazonviewer1.model;
+
+import java.sql.Date;
+
+public class Magazine {
+	int id;
+	String title;
+	Date editionData;
+	String editorial;
+	String[] authors;
+}

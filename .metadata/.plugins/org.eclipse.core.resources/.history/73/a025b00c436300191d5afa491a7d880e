@@ -1,0 +1,12 @@
+package com.anncode.amazonviewer.model;
+
+import java.sql.Date;
+
+public class Magazine extends Publication{
+	private int id;
+	
+	public int getId() {
+		return id;
+	}
+	
+}

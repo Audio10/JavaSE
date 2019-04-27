@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.lang.Short"/>
+<fullyQualifiedTypeName name="com.anncode.amazonviewer.model.Film"/>
+<fullyQualifiedTypeName name="com.anncode.amazonviewer.model.Publication"/>
+<fullyQualifiedTypeName name="com.anncode.amazonviewer.model.IVisualizable"/>
+<fullyQualifiedTypeName name="com.anncode.amazonviewer.model.Chapter"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.anncode.amazonviewer.model.Movie"/>
+</qualifiedTypeNameHistroy>

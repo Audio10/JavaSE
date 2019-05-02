@@ -1,5 +1,7 @@
 package com.anncode.amazonviewer.model;
 
+import java.util.ArrayList;
+
 public class Chapter extends Movie{
 	private int id;
 	private int sessionNumber;
@@ -33,4 +35,12 @@ public class Chapter extends Movie{
 				"\nSessionNumber" + getSessionNumber();
 	}
 	
+	public static ArrayList<Chapter> makeChapterList() {
+		ArrayList<Chapter> chapters = new ArrayList<>();
+		
+		for (int i = 1; i <= 5; i++) 
+			chapters.add(new Chapter("Capitulo "+ i, "genero "+i, "creator "+i, 45, (short) (2017+i), i));
+		
+		return chapters;
+	}
 }

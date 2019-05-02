@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
+import com.anncode.amazonviewer.model.Chapter;
 import com.anncode.amazonviewer.model.Movie;
+import com.anncode.amazonviewer.model.Serie;
 
 public class Main {
 
@@ -74,6 +76,7 @@ public class Main {
 
 			Scanner scanner = new Scanner(System.in);
 			response = scanner.nextByte();
+			
 			if (response != 0) {
 				Movie movieSelected = movies.get(response - 1);
 				movieSelected.setViewed(true);
@@ -94,12 +97,28 @@ public class Main {
 	}
 
 	public static void showSeries() {
-		int exit = 1;
+		byte response = 0;
+		ArrayList<Serie> series = Serie.makeSeriesList();
 		do {
 			System.out.println();
 			System.out.println(":: Series ::");
 			System.out.println();
-		} while (exit != 0);
+
+			for (Serie serie : series) {
+				System.out.println(serie.getTitle() + " Visto: " + serie.isViewed());
+			}
+
+			System.out.println("0 Regresar al Menu");
+			System.out.println();
+
+			Scanner scanner = new Scanner(System.in);
+			response = scanner.nextByte();
+			
+			if (response != 0) {
+				showChapters(series.get(response-1).getChapters());
+			}
+			
+		} while (response != 0);
 	}
 
 	public static void showBooks() {
@@ -120,13 +139,39 @@ public class Main {
 		} while (exit != 0);
 	}
 
-	public static void showChapters() {
-		int exit = 1;
+	public static void showChapters(ArrayList<Chapter> chaptersOfSerieSelected) {
+		int response = 0;
 		do {
 			System.out.println();
 			System.out.println(":: Chapters ::");
 			System.out.println();
-		} while (exit != 0);
+			
+			for (Chapter chapter : chaptersOfSerieSelected) {
+				System.out.println(" Titulo: " + chapter.getTitle() + " Visto " + chapter.isViewed());
+			}
+			
+			System.out.println("0 Regresar al Menu");
+			System.out.println();
+
+			Scanner scanner = new Scanner(System.in);
+			response = scanner.nextByte();
+			
+			if (response != 0) {
+				Chapter chapterSelected = chaptersOfSerieSelected.get(response-1);
+				chapterSelected.setViewed(true);
+				Date dateI = chapterSelected.startToSee(new Date());
+				
+				for (int i = 0; i < 10000; i++) {
+					System.out.println("..........");
+				}
+				
+				chapterSelected.stopToSee(dateI, new Date());
+				System.out.println();
+				System.out.println("Viste: " + chapterSelected);
+				System.out.println("Por: "+ chapterSelected.getTimeViewed() + "milisegundos");
+			}
+			
+		} while (response != 0);
 	}
 
 	public static void makeReport() {
